@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* 1. Fuentes Locales */
+@font-face {
+  font-family: "Rockyeah Brush";
+  src: url("./assets/fonts/Rockyeah/Rockyeah-Brush.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Tokens de tema Tailwind v4 */
+@theme {
+  --font-display: "Rockyeah Brush", cursive, sans-serif;
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+/* 3. Ajustes de Lenis para scroll suave */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
